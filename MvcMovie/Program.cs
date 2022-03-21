@@ -22,6 +22,11 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=HelloWorld}/{action=Welcome}/{id?}");
+
+// helloworld/welcome/4?name=Talane
+// helloworld/welcome/4?firstName=Aum&lastName=Ono
+// helloworld/welcome/Talane/4
+// helloworld/welcome/Aum/Ono/4
 
 app.Run();

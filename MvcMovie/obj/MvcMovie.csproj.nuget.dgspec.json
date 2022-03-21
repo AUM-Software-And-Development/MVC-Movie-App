@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\eric_\\.nuget\\packages\\",
-        "outputPath": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\MvcMovie\\obj\\",
+        "outputPath": "C:\\development\\vs2022\\ASP.NET Core 6.0\\Tuts\\ASP.NET Core 6.0 (MvcMovie)\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eric_\\AppData\\Roaming\\NuGet\\NuGet.Config",
