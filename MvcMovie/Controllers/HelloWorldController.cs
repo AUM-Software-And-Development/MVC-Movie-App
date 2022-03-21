@@ -5,14 +5,22 @@ namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
     {
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my default action...";
+            return View();
         }
 
         public string Welcome(string firstName="Eric", string lastName="Dee", int id = 1)
         {
             return HtmlEncoder.Default.Encode($"Hello {firstName} {lastName}, id: {id}");
+        }
+
+        public IActionResult WelcomeWithContext(string name, int numTimes = 1)
+        {
+            ViewData["Message"] = "Hello " + name;
+            ViewData["NumTimes"] = numTimes;
+
+            return View();
         }
     }
 }

@@ -22,11 +22,14 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=HelloWorld}/{action=Welcome}/{id?}");
+    pattern: "{controller=HelloWorld}/{action=WelcomeWithContext}/{id?}");
 
-// helloworld/welcome/4?name=Talane
-// helloworld/welcome/4?firstName=Aum&lastName=Ono
-// helloworld/welcome/Talane/4
-// helloworld/welcome/Aum/Ono/4
+// Query the pattern directly:
+// www.aumono.com?name=Talane&numTimes=16
+// Query the route:
+// www.aumono.com?/helloworld/welcome/4?name=Talane
+// www.aumono.com?/helloworld/welcome/4?firstName=Aum&lastName=Ono
+// www.aumono.com?/helloworld/welcome/Talane/4
+// www.aumono.com?/helloworld/welcome/Aum/Ono/4
 
 app.Run();
