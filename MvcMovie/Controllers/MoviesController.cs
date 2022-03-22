@@ -22,9 +22,38 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Movies
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string movieGenre, string searchString)
         {
-            return View(await _context.Movie.ToListAsync());
+            // Select all genres as a list of queryable strings
+            // : The Distinct method is used when the query is made at instantiation of a MovieGenreViewModel rather than using a group by clause.
+            IQueryable<string> genreQuery = from movie in _context.Movie
+                                            orderby movie.Genre
+                                            select movie.Genre;
+
+            var movies = from movie in _context.Movie
+                         select movie;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                // Contains is sometimes case sensitive due to being mapped as an SQL LIKE clause.
+                movies = movies.Where(search => search.Title!.Contains(searchString));
+            }
+
+            if (!String.IsNullOrEmpty(movieGenre))
+            {
+                // From the list of found movies, constrain them to the specified genre.
+                movies = movies.Where(movie => movie.Genre == movieGenre);
+            }
+
+            // Perform the deferred query sets defined in the code now.
+            // (Executes the linq query here as it is not defined until iterated or called to list | all queries are deferred this way.)
+            var movieGenreVM = new MovieGenreViewModel
+            {
+                Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+                Movies = await movies.ToListAsync()
+            };
+
+            return View(movieGenreVM);
         }
 
         // GET: Movies/Details/5
